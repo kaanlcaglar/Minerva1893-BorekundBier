@@ -142,10 +142,9 @@ const squads=[
  {t:'Squad 3',f:'3-1-1',d:'Starting VI · 8 min',p:std('William','Gulam','Andrei','Murat','Sadegh')},
  {t:'Squad 4',f:'3-1-1',d:'Starting VI · 8 min',p:std('William','Serkan','Emre','Dincer','Emrah')},
  {t:'Squad 5',f:'3-1-1',d:'Starting VI · 8 min',p:std('Sadegh','Gulam','Gokten','Murat','Ender')},
- {t:'Squad 6',f:'3-1-1',d:'Starting VI · 8 min',p:std('William','Gulam','Andrei','Murat','Dincer')},
- {t:'Final Round',f:'3-1-1',d:'11 min · vs Group B',p:std('William','Gulam','Andrei','Murat','Sadegh')},
+ {t:'Squad 6',f:'3-1-1',d:'Best defensive 3-1-1',p:std('William','Gulam','Andrei','Murat','Dincer')},
  {t:'Agile Squad',f:'3-1-1',d:'',p:std('William','Gulam','Andrei','Murat','Sadegh')},
- {t:'Defence Squad',f:'3-2',d:'',p:[P('CM','Genc',32,26),P('CM','Gulam',68,26),...backs('Andrei','Murat','Dincer'),P('GK','Kenan',50,87,1)]}
+ {t:'Full Defence',f:'3-2',d:'Hardcore defence',p:[P('CM','Genc',32,26),P('CM','Gulam',68,26),...backs('Andrei','Murat','Dincer'),P('GK','Kenan',50,87,1)]}
 ];
 document.getElementById('grid').innerHTML=squads.map(s=>`<div class="card">
  <p class="title">${s.t}</p><p class="sub">${s.f}${s.d?` · ${s.d}`:''}</p>
