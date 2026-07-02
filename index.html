@@ -117,12 +117,13 @@ const P=(pos,nm,x,y,gk)=>({pos,nm,x,y,gk});
 const backs=(l,c,r)=>[P('LB',l,22,63),P('CB',c,50,63),P('RB',r,78,63)];
 const std=(st,cm,l,c,r)=>[P('ST',st,50,14),P('CM',cm,50,38),...backs(l,c,r),P('GK','Kenan',50,87,1)];
 const squads=[
- {t:'Squad 1',f:'3-1-1',d:'Starting VI — Game 1',p:std('William','Gulam','Andrei','Murat','Sadegh')},
- {t:'Squad 2',f:'3-1-1',d:'Starting VI — Game 2',p:std('Fatih','Genc','Serghei','Murat','Sadegh')},
- {t:'Squad 3',f:'3-1-1',d:'Starting VI — Game 3',p:std('William','Gulam','Andrei','Murat','Sadegh')},
- {t:'Squad 4',f:'3-1-1',d:'Starting VI — Game 4',p:std('William','Serkan','Emre','Dincer','Emrah')},
- {t:'Squad 5',f:'3-1-1',d:'Starting VI — Game 5',p:std('Sadegh','Gulam','Gokten','Murat','Ender')},
- {t:'Squad 6',f:'3-1-1',d:'Starting VI — Game 6',p:std('William','Gulam','Andrei','Murat','Dincer')},
+ {t:'Squad 1',f:'3-1-1',d:'Starting VI — Game 1 · 8 min',p:std('William','Gulam','Andrei','Murat','Sadegh')},
+ {t:'Squad 2',f:'3-1-1',d:'Starting VI — Game 2 · 8 min',p:std('Fatih','Genc','Serghei','Murat','Sadegh')},
+ {t:'Squad 3',f:'3-1-1',d:'Starting VI — Game 3 · 8 min',p:std('William','Gulam','Andrei','Murat','Sadegh')},
+ {t:'Squad 4',f:'3-1-1',d:'Starting VI — Game 4 · 8 min',p:std('William','Serkan','Emre','Dincer','Emrah')},
+ {t:'Squad 5',f:'3-1-1',d:'Starting VI — Game 5 · 8 min',p:std('Sadegh','Gulam','Gokten','Murat','Ender')},
+ {t:'Squad 6',f:'3-1-1',d:'Starting VI — Game 6 · 8 min',p:std('William','Gulam','Andrei','Murat','Dincer')},
+ {t:'Final Round',f:'3-1-1',d:'Game 7 · 11 min · vs Group B',p:std('William','Gulam','Andrei','Murat','Sadegh')},
  {t:'Agile Squad',f:'3-1-1',d:'',p:std('William','Gulam','Andrei','Murat','Sadegh')},
  {t:'Defence Squad',f:'3-2',d:'',p:[P('CM','Genc',32,26),P('CM','Gulam',68,26),...backs('Andrei','Murat','Dincer'),P('GK','Kenan',50,87,1)]}
 ];
