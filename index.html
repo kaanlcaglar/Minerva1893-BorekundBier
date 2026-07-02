@@ -3,38 +3,59 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Benefiz im Kiez 2026 — Squads</title>
+<title>Minerva1893 | Börek und Bier — Benefiz im Kiez 2026</title>
 <style>
   :root{
     --pitch:#2e7d46; --line:rgba(255,255,255,.75);
     --bg:#111511; --card-text:#f2f2ee; --muted:#9aa79c;
     --badge:#ffffff; --badge-text:#15221a; --gk:#f5c542;
-    --accent:#4caf50;
+    --accent:#4caf50; --section-bg:#1a1f1a;
   }
   *{box-sizing:border-box;margin:0;padding:0}
   body{background:var(--bg);color:var(--card-text);font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;padding:env(safe-area-inset-top,20px) 14px 40px;-webkit-text-size-adjust:100%}
-  header{text-align:center;margin-bottom:24px;padding-top:16px}
-  header h1{font-size:clamp(20px,5vw,28px);letter-spacing:.3px;line-height:1.3}
-  .meta{color:var(--muted);font-size:clamp(12px,3vw,14px);margin-top:6px;line-height:1.5}
+  header{text-align:center;margin-bottom:28px;padding-top:16px}
+  header h1{font-size:clamp(22px,5.5vw,32px);letter-spacing:.3px;line-height:1.3}
+  header .team{font-size:clamp(13px,3.5vw,16px);color:var(--accent);font-weight:600;margin-top:4px}
+  .meta{color:var(--muted);font-size:clamp(12px,3vw,14px);margin-top:8px;line-height:1.6}
   .meta strong{color:var(--card-text)}
-  .link{display:inline-block;margin-top:12px;padding:8px 16px;background:var(--accent);color:#fff;text-decoration:none;border-radius:6px;font-size:13px;font-weight:600;transition:opacity .2s}
+  .link{display:inline-block;margin-top:14px;padding:10px 20px;background:var(--accent);color:#fff;text-decoration:none;border-radius:6px;font-size:13px;font-weight:600;transition:opacity .2s}
   .link:hover{opacity:.85}
   .link:active{opacity:.7}
+
+  section{max-width:960px;margin:0 auto 32px}
+  .section-title{font-size:clamp(16px,4vw,20px);font-weight:700;margin-bottom:12px;padding-left:2px}
+
+  /* Schedule table */
+  .schedule{width:100%;border-collapse:collapse;background:var(--section-bg);border-radius:8px;overflow:hidden}
+  .schedule th,.schedule td{padding:10px 12px;text-align:left;font-size:clamp(12px,3vw,14px)}
+  .schedule th{background:var(--pitch);color:#fff;font-weight:600;font-size:clamp(11px,2.5vw,12px);text-transform:uppercase;letter-spacing:.5px}
+  .schedule tr:not(:last-child) td{border-bottom:1px solid rgba(255,255,255,.06)}
+  .schedule .time{font-weight:700;white-space:nowrap;color:var(--accent)}
+  .schedule .vs{color:var(--muted);font-size:11px}
+
+  /* Tactics */
+  .tactics{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:10px}
+  .tactic{background:var(--section-bg);border-radius:8px;padding:16px;border-left:3px solid var(--accent)}
+  .tactic .num{font-size:11px;color:var(--accent);font-weight:700;text-transform:uppercase;letter-spacing:.5px}
+  .tactic .name{font-size:clamp(14px,3.5vw,16px);font-weight:700;margin-top:4px}
+
+  /* Squad grid */
   .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px;max-width:960px;margin:0 auto}
   @media(min-width:860px){.grid{grid-template-columns:repeat(4,1fr)}}
-  @media(max-width:440px){.grid{grid-template-columns:1fr 1fr;gap:10px}}
+  @media(max-width:520px){.grid{grid-template-columns:1fr}}
   .card{min-width:0}
-  .title{font-size:clamp(11px,3vw,13px);font-weight:700;margin:0 0 1px 2px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .title{font-size:clamp(12px,3vw,13px);font-weight:700;margin:0 0 1px 2px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
   .sub{font-size:11px;color:var(--muted);margin:0 0 6px 2px}
   .pitch{position:relative;aspect-ratio:3/4;background:var(--pitch);border:1.5px solid var(--line);border-radius:8px;overflow:hidden}
   .half{position:absolute;top:50%;left:0;right:0;height:1px;background:var(--line);opacity:.4}
   .circle{position:absolute;top:50%;left:50%;width:20%;aspect-ratio:1;border:1px solid var(--line);border-radius:50%;transform:translate(-50%,-50%);opacity:.4}
   .box{position:absolute;left:28%;right:28%;bottom:0;height:13%;border:1.5px solid var(--line);border-bottom:none;border-radius:2px 2px 0 0}
   .goal{position:absolute;left:39%;right:39%;bottom:-1px;height:3px;background:var(--line);border-radius:2px}
-  .pl{position:absolute;transform:translate(-50%,-50%);text-align:center;width:clamp(48px,18vw,70px)}
+  .pl{position:absolute;transform:translate(-50%,-50%);text-align:center;width:clamp(52px,20vw,70px)}
   .dot{display:inline-flex;align-items:center;justify-content:center;width:clamp(20px,6vw,24px);height:clamp(20px,6vw,24px);border-radius:50%;background:var(--badge);color:var(--badge-text);font-size:clamp(7px,2vw,9px);font-weight:800}
   .gk .dot{background:var(--gk)}
-  .nm{display:block;font-size:clamp(9px,2.5vw,11px);font-weight:600;margin-top:2px;text-shadow:0 1px 2px rgba(0,0,0,.5);white-space:nowrap}
+  .nm{display:block;font-size:clamp(9px,2.8vw,11px);font-weight:600;margin-top:2px;text-shadow:0 1px 2px rgba(0,0,0,.5);white-space:nowrap}
+
   footer{text-align:center;margin-top:32px;color:var(--muted);font-size:11px}
   footer a{color:var(--accent);text-decoration:none}
 </style>
@@ -42,20 +63,52 @@
 <body>
 <header>
   <h1>Benefiz im Kiez 2026</h1>
+  <div class="team">Minerva1893 | Börek und Bier</div>
   <div class="meta">
     <strong>Sunday, July 5</strong> &middot; 11:00 – 16:00<br>
-    Willi-Boos-Stadion, Berlin<br>
-    6v6 (5+1) &middot; 6 group games + final
+    Willi-Boos-Stadion, Baerwaldstr. 35, Berlin<br>
+    6v6 (5+1) &middot; Group A &middot; 8 min games
   </div>
   <a class="link" href="https://www.meinturnierplan.de/c/zx02jq3f/benefiz-im-kiez-2026/" target="_blank" rel="noopener">
-    View Tournament Schedule &rarr;
+    Full Tournament Schedule &rarr;
   </a>
 </header>
 
-<div class="grid" id="grid"></div>
+<!-- Schedule -->
+<section>
+  <h2 class="section-title">Our Games</h2>
+  <table class="schedule">
+    <thead><tr><th>Kick-off</th><th>Match</th></tr></thead>
+    <tbody>
+      <tr><td class="time">11:20</td><td><span class="vs">vs</span> Medizin Friedrichshain</td></tr>
+      <tr><td class="time">11:40</td><td><span class="vs">vs</span> Roter Stern Berlin</td></tr>
+      <tr><td class="time">12:20</td><td><span class="vs">vs</span> THC 1</td></tr>
+      <tr><td class="time">12:40</td><td><span class="vs">vs</span> FC Juno</td></tr>
+      <tr><td class="time">13:20</td><td><span class="vs">vs</span> Ballosophen</td></tr>
+      <tr><td class="time">14:00</td><td><span class="vs">vs</span> Fevernova</td></tr>
+    </tbody>
+  </table>
+</section>
+
+<!-- Tactics -->
+<section>
+  <h2 class="section-title">Tactics</h2>
+  <div class="tactics">
+    <div class="tactic"><span class="num">1</span><div class="name">3-Second Counter-Press</div></div>
+    <div class="tactic"><span class="num">2</span><div class="name">2-Touch</div></div>
+    <div class="tactic"><span class="num">3</span><div class="name">Corner Drill</div></div>
+    <div class="tactic"><span class="num">4</span><div class="name">Diamond</div></div>
+  </div>
+</section>
+
+<!-- Squads -->
+<section>
+  <h2 class="section-title">Squads</h2>
+  <div class="grid" id="grid"></div>
+</section>
 
 <footer>
-  Borekund &amp; Bier &middot; <a href="https://www.meinturnierplan.de/c/zx02jq3f/benefiz-im-kiez-2026/" target="_blank" rel="noopener">meinturnierplan.de</a>
+  Minerva1893 | Börek und Bier &middot; <a href="https://www.meinturnierplan.de/c/zx02jq3f/benefiz-im-kiez-2026/" target="_blank" rel="noopener">meinturnierplan.de</a>
 </footer>
 
 <script>
