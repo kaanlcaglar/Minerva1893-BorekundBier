@@ -78,6 +78,17 @@
   .gk .dot{background:var(--gk)}
   .nm{display:block;font-size:clamp(9px,2.8vw,11px);font-weight:600;margin-top:2px;text-shadow:0 1px 2px rgba(0,0,0,.5);white-space:nowrap}
 
+  /* Info */
+  .info{background:var(--section-bg);border-radius:8px;padding:16px;border-left:3px solid var(--accent)}
+  .info p,.info li{color:var(--muted);font-size:clamp(12px,3vw,14px);line-height:1.65}
+  .info p{margin-bottom:12px}
+  .info p:last-child,.info ul:last-child{margin-bottom:0}
+  .info strong{color:var(--card-text)}
+  .info ul{margin:0 0 12px 18px}
+  .info li{margin-bottom:6px}
+  .info li:last-child{margin-bottom:0}
+  .info .highlight{color:var(--card-text);font-weight:600}
+
   footer{text-align:center;margin-top:32px;color:var(--muted);font-size:11px}
   footer a{color:var(--accent);text-decoration:none}
 </style>
@@ -96,6 +107,24 @@
     Full Tournament Schedule &rarr;
   </a>
 </header>
+
+<!-- Important Info -->
+<section>
+  <h2 class="section-title">Important Info</h2>
+  <div class="info">
+    <p><span class="highlight">Arrive by 10:00 AM.</span> The tournament starts at <strong>11:00 AM</strong> — please be there early so things don't get hectic.</p>
+    <p><strong>Changing rooms:</strong> We only have four changing rooms, meaning four teams will share one room. It's a tight squeeze — change quickly, gather your valuables, and take them out to the pitch in a bag so nothing goes missing.</p>
+    <p><strong>Food &amp; drinks:</strong></p>
+    <ul>
+      <li>Prepared rolls and coffee in the morning</li>
+      <li>Concession stand opens when the tournament starts</li>
+      <li>Caipirinha stand, as always</li>
+    </ul>
+    <p><strong>Entry fee:</strong> Bring <strong>€50 in cash</strong> — no debit cards or PayPal. You'll receive a receipt and a six-pack of water.</p>
+    <p><strong>Format:</strong> Matches are played simultaneously on both pitches. Three referees are lined up — most of you will likely know them from the recreational league.</p>
+    <p><span class="highlight">Cancellations:</span> If you need to cancel, please let us know privately or in the group well in advance — and no later than the day before — so we can adjust the tournament schedule.</p>
+  </div>
+</section>
 
 <!-- Schedule -->
 <section>
