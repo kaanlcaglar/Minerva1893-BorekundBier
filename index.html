@@ -10,7 +10,7 @@
 <!-- Open Graph / WhatsApp -->
 <meta property="og:type" content="website">
 <meta property="og:title" content="Minerva1893 | Börek und Bier">
-<meta property="og:description" content="Benefiz im Kiez 2026 · 11th place · Results, goal scorers, squads & tactics">
+<meta property="og:description" content="Benefiz im Kiez 2026 · 11th place · Results, analysis, goal scorers & squads">
 <meta property="og:image" content="https://minerva1893-borekund-bier.vercel.app/og-image.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
@@ -64,6 +64,41 @@
   .team-photo{display:block;width:100%;max-width:960px;margin:0 auto 12px;border-radius:8px;border:1px solid rgba(255,255,255,.08)}
   .photo-caption{text-align:center;color:var(--muted);font-size:clamp(11px,2.8vw,13px);margin-bottom:12px}
 
+  /* Videos */
+  .videos{display:grid;grid-template-columns:1fr;gap:14px}
+  .video-card{background:var(--section-bg);border-radius:8px;overflow:hidden;border:1px solid rgba(255,255,255,.06)}
+  .video-card video{display:block;width:100%;background:#000}
+  .video-label{padding:10px 12px;font-size:clamp(12px,3vw,13px);color:var(--muted)}
+
+  /* Analysis */
+  .analysis-intro{background:var(--section-bg);border-radius:8px;padding:16px;border-left:3px solid var(--accent);margin-bottom:12px}
+  .analysis-intro p{color:var(--muted);font-size:clamp(12px,3vw,14px);line-height:1.65;margin-bottom:10px}
+  .analysis-intro p:last-child{margin-bottom:0}
+  .analysis-intro strong{color:var(--card-text)}
+  .analysis-intro .lead{font-size:clamp(13px,3.2vw,15px);color:var(--card-text);line-height:1.6}
+  .analysis h3{font-size:clamp(13px,3.2vw,15px);font-weight:700;margin:20px 0 8px 2px;color:var(--card-text)}
+  .analysis h3:first-of-type{margin-top:0}
+  .verdict{font-size:11px;color:var(--accent);font-weight:600;margin-top:6px}
+  .analysis-match{background:var(--section-bg);border-radius:8px;border-left:3px solid rgba(76,175,80,.35);margin-bottom:8px}
+  .analysis-match summary{padding:14px 16px;list-style:none;display:flex;align-items:center;gap:8px;cursor:pointer;-webkit-tap-highlight-color:transparent}
+  .analysis-match summary::-webkit-details-marker{display:none}
+  .analysis-match .score{font-weight:800;flex-shrink:0}
+  .analysis-match .score.w{color:var(--accent)}
+  .analysis-match .score.l{color:#e57373}
+  .analysis-match .score.d{color:var(--muted)}
+  .analysis-match .opp{font-size:clamp(13px,3.2vw,14px);font-weight:600}
+  .analysis-match .arrow{margin-left:auto;color:var(--muted);font-size:12px;transition:transform .2s}
+  .analysis-match[open] .arrow{transform:rotate(90deg)}
+  .analysis-match .body{padding:0 16px 14px;color:var(--muted);font-size:clamp(12px,3vw,13px);line-height:1.55;border-top:1px solid rgba(255,255,255,.06);padding-top:12px;margin:0 16px}
+  .analysis-match .body p{margin-bottom:8px}
+  .analysis-match .body p:last-child{margin-bottom:0}
+  .analysis-list{margin:0 0 10px 16px}
+  .analysis-list li{margin-bottom:4px;font-size:clamp(12px,3vw,13px);color:var(--muted);line-height:1.5}
+  .takeaway{background:var(--section-bg);border-radius:8px;padding:16px;border-left:3px solid var(--accent);margin-top:12px}
+  .takeaway p{color:var(--muted);font-size:clamp(12px,3vw,14px);line-height:1.65;margin-bottom:10px}
+  .takeaway p:last-child{margin-bottom:0}
+  .takeaway strong{color:var(--card-text)}
+
   /* Tactics */
   .tactics{display:grid;grid-template-columns:1fr;gap:10px}
   .tactic{background:var(--section-bg);border-radius:8px;border-left:3px solid var(--accent);cursor:pointer;-webkit-tap-highlight-color:transparent}
@@ -92,17 +127,6 @@
   .gk .dot{background:var(--gk)}
   .nm{display:block;font-size:clamp(9px,2.8vw,11px);font-weight:600;margin-top:2px;text-shadow:0 1px 2px rgba(0,0,0,.5);white-space:nowrap}
 
-  /* Info */
-  .info{background:var(--section-bg);border-radius:8px;padding:16px;border-left:3px solid var(--accent)}
-  .info p,.info li{color:var(--muted);font-size:clamp(12px,3vw,14px);line-height:1.65}
-  .info p{margin-bottom:12px}
-  .info p:last-child,.info ul:last-child{margin-bottom:0}
-  .info strong{color:var(--card-text)}
-  .info ul{margin:0 0 12px 18px}
-  .info li{margin-bottom:6px}
-  .info li:last-child{margin-bottom:0}
-  .info .highlight{color:var(--card-text);font-weight:600}
-
   footer{text-align:center;margin-top:32px;color:var(--muted);font-size:11px}
   footer a{color:var(--accent);text-decoration:none}
 </style>
@@ -114,29 +138,12 @@
   <div class="team">Minerva1893 | Börek und Bier</div>
   <div class="meta">
     <strong>Sunday, July 5</strong> &middot; Willi-Boos-Stadion, Berlin<br>
-    6v6 (5+1) &middot; Group A &middot; 14 teams
+    6v6 (5+1) &middot; Group A &middot; 14 teams &middot; 10 min games
   </div>
   <a class="link" href="https://www.meinturnierplan.de/c/zx02jq3f/benefiz-im-kiez-2026/" target="_blank" rel="noopener">
     Full Tournament Schedule &rarr;
   </a>
 </header>
-
-<!-- Important Info -->
-<section>
-  <h2 class="section-title">Important Info</h2>
-  <div class="info">
-    <p><span class="highlight">Arrive by 10:00 AM.</span> The tournament starts at <strong>11:00 AM</strong> — please be there early so things don't get hectic.</p>
-    <p><strong>Changing rooms:</strong> There are only four changing rooms, meaning four teams will share one room. It's a tight squeeze — change quickly, gather your valuables, and take them out to the pitch in a bag so nothing goes missing.</p>
-    <p><strong>Food &amp; drinks:</strong></p>
-    <ul>
-      <li>Prepared rolls and coffee in the morning</li>
-      <li>Concession stand opens when the tournament starts</li>
-      <li>There will be a Caipirinha stand</li>
-    </ul>
-    <p><strong>Entry fee:</strong> Bring <strong>€5 in cash</strong></p>
-    <p><strong>Format:</strong> Matches are played simultaneously on both pitches. Three referees are lined up — most of you will likely know them from the recreational league.</p>
-  </div>
-</section>
 
 <!-- Results -->
 <section>
@@ -149,33 +156,40 @@
     <p><strong>Goal scorers:</strong> Dincer, William (vs Roter Stern) &middot; Fatih (vs Medizin)</p>
   </div>
   <table class="schedule">
-    <thead><tr><th>Match</th><th>Result</th></tr></thead>
+    <thead><tr><th>Kick-off</th><th>Match</th><th>Result</th></tr></thead>
     <tbody>
       <tr>
-        <td><span class="vs">vs</span> Medizin Friedrichshain</td>
-        <td class="result loss">1–2<span class="scorers">Fatih</span></td>
-      </tr>
-      <tr>
-        <td><span class="vs">vs</span> Roter Stern Berlin</td>
-        <td class="result win">2–1<span class="scorers">Dincer, William</span></td>
-      </tr>
-      <tr>
-        <td><span class="vs">vs</span> THC 1</td>
-        <td class="result loss">0–1</td>
-      </tr>
-      <tr>
-        <td><span class="vs">vs</span> FC Juno</td>
-        <td class="result draw">0–0</td>
-      </tr>
-      <tr>
+        <td class="time">11:24</td>
         <td><span class="vs">vs</span> Ballosophen</td>
         <td class="result draw">0–0</td>
       </tr>
       <tr>
+        <td class="time">11:48</td>
+        <td><span class="vs">vs</span> Roter Stern Berlin</td>
+        <td class="result win">2–1<span class="scorers">Dincer, William</span></td>
+      </tr>
+      <tr>
+        <td class="time">12:36</td>
+        <td><span class="vs">vs</span> THC 1</td>
+        <td class="result loss">0–1</td>
+      </tr>
+      <tr>
+        <td class="time">13:00</td>
+        <td><span class="vs">vs</span> FC Juno</td>
+        <td class="result draw">0–0</td>
+      </tr>
+      <tr>
+        <td class="time">13:48</td>
+        <td><span class="vs">vs</span> Medizin Friedrichshain</td>
+        <td class="result loss">1–2<span class="scorers">Fatih</span></td>
+      </tr>
+      <tr>
+        <td class="time">14:36</td>
         <td><span class="vs">vs</span> Fevernova</td>
         <td class="result loss">0–1</td>
       </tr>
       <tr>
+        <td class="time">15:40</td>
         <td><strong>Placement</strong> <span class="vs">vs</span> Pinchos</td>
         <td class="result win">3–2<span class="scorers">pens: Gulam, Dincer</span></td>
       </tr>
@@ -183,11 +197,149 @@
   </table>
 </section>
 
+<!-- Videos -->
+<section>
+  <h2 class="section-title">Match Footage</h2>
+  <div class="videos">
+    <div class="video-card">
+      <video controls playsinline preload="metadata" src="videos/match-1.mp4"></video>
+      <div class="video-label">Clip 1</div>
+    </div>
+    <div class="video-card">
+      <video controls playsinline preload="metadata" src="videos/match-2.mp4"></video>
+      <div class="video-label">Clip 2</div>
+    </div>
+    <div class="video-card">
+      <video controls playsinline preload="metadata" src="videos/match-3.mp4"></video>
+      <div class="video-label">Clip 3</div>
+    </div>
+  </div>
+</section>
+
+<!-- Analysis -->
+<section class="analysis">
+  <h2 class="section-title">Tournament Analysis</h2>
+  <div class="analysis-intro">
+    <p class="lead">11th of 14 sounds disappointing. The fixture list tells a different story: <strong>we were competitive in the tournament's hardest group, never lost by more than one goal, and took points off three teams that finished in the top eight.</strong></p>
+    <p>Group A wasn't a normal group — it was a mini-championship. Four of the top eight teams in the entire field came from our group, including the champions.</p>
+  </div>
+
+  <h3>Group A strength</h3>
+  <table class="schedule">
+    <thead><tr><th>Team</th><th>Final rank</th></tr></thead>
+    <tbody>
+      <tr><td>THC 1</td><td class="result win">1st</td></tr>
+      <tr><td>Ballosophen</td><td class="result win">4th</td></tr>
+      <tr><td>Fevernova</td><td class="result win">5th</td></tr>
+      <tr><td>FC Juno</td><td>8th</td></tr>
+      <tr><td>Roter Stern</td><td>10th</td></tr>
+      <tr><td><strong>Minerva</strong></td><td><strong>11th</strong></td></tr>
+      <tr><td>Medizin</td><td class="result loss">13th</td></tr>
+    </tbody>
+  </table>
+
+  <h3>Game by game</h3>
+
+  <details class="analysis-match">
+    <summary><span class="score d">0–0</span><span class="opp">11:24 · vs Ballosophen</span><span class="arrow">&#9654;</span></summary>
+    <div class="body">
+      <p><strong>Opponent:</strong> 4th overall. Beat Roter Stern 4–0, Medizin 3–2, FC Juno 1–0.</p>
+      <p>Only two teams took points off them: THC 1 (0–0) and us. Fevernova, FC Juno, and Roter Stern all lost.</p>
+      <p class="verdict">One of our best results — a point off a top-four side.</p>
+    </div>
+  </details>
+
+  <details class="analysis-match">
+    <summary><span class="score w">2–1</span><span class="opp">11:48 · vs Roter Stern</span><span class="arrow">&#9654;</span></summary>
+    <div class="body">
+      <p><strong>Opponent:</strong> 10th overall — one place above us. Beat Fevernova and Medizin, but got hammered 4–0 by Ballosophen.</p>
+      <p>Our clearest above-expectation result. Dincer and William delivered when it mattered.</p>
+      <p class="verdict">Best performance of the day.</p>
+    </div>
+  </details>
+
+  <details class="analysis-match">
+    <summary><span class="score l">0–1</span><span class="opp">12:36 · vs THC 1</span><span class="arrow">&#9654;</span></summary>
+    <div class="body">
+      <p><strong>Opponent:</strong> Tournament champions. Group record: 4W 2D, 4 scored, 0 conceded.</p>
+      <p>Only Ballosophen and FC Juno managed a draw (0–0). Everyone else lost — all by 1–0.</p>
+      <p class="verdict">Respectable loss to the best team in the tournament.</p>
+    </div>
+  </details>
+
+  <details class="analysis-match">
+    <summary><span class="score d">0–0</span><span class="opp">13:00 · vs FC Juno</span><span class="arrow">&#9654;</span></summary>
+    <div class="body">
+      <p><strong>Opponent:</strong> 8th overall. The draw specialists — 4 draws in 6 games.</p>
+      <p>We matched THC 1 and Fevernova in doing what almost everyone else struggled with.</p>
+      <p class="verdict">Solid. Our discipline showed.</p>
+    </div>
+  </details>
+
+  <details class="analysis-match">
+    <summary><span class="score l">1–2</span><span class="opp">13:48 · vs Medizin</span><span class="arrow">&#9654;</span></summary>
+    <div class="body">
+      <p><strong>Opponent:</strong> 13th overall. Won only one group game — against us.</p>
+      <p>Close scoreline, Fatih on the scoresheet. In a 10-minute game, one lapse is enough.</p>
+      <p class="verdict">The regret game. Likely cost us a better knockout pairing.</p>
+    </div>
+  </details>
+
+  <details class="analysis-match">
+    <summary><span class="score l">0–1</span><span class="opp">14:36 · vs Fevernova</span><span class="arrow">&#9654;</span></summary>
+    <div class="body">
+      <p><strong>Opponent:</strong> 5th overall. Tight and pragmatic — lots of 1–0 wins.</p>
+      <p>Ballosophen and THC 1 also lost 0–1. Only FC Juno held them to a draw.</p>
+      <p class="verdict">Fine margins against a top-five team. No shame here.</p>
+    </div>
+  </details>
+
+  <details class="analysis-match">
+    <summary><span class="score w">3–2</span><span class="opp">15:40 · vs Pinchos (pens)</span><span class="arrow">&#9654;</span></summary>
+    <div class="body">
+      <p><strong>Opponent:</strong> 12th overall. Placement match for 11th vs 12th.</p>
+      <p>Gulam and Dincer from the spot. Job done when it counted.</p>
+      <p class="verdict">Clutch when 11th place was on the line.</p>
+    </div>
+  </details>
+
+  <h3>The numbers</h3>
+  <table class="schedule">
+    <thead><tr><th>Metric</th><th>Minerva</th><th>Group A avg</th></tr></thead>
+    <tbody>
+      <tr><td>Points</td><td>5</td><td>9.0</td></tr>
+      <tr><td>Goals scored</td><td>3</td><td>4.7</td></tr>
+      <tr><td>Goals conceded</td><td>5</td><td>4.3</td></tr>
+      <tr><td>Losses by 2+ goals</td><td class="result win">0</td><td>—</td></tr>
+      <tr><td>Losses by 1 goal</td><td>3</td><td>—</td></tr>
+    </tbody>
+  </table>
+
+  <h3>Common opponents</h3>
+  <table class="schedule">
+    <thead><tr><th>Opponent</th><th>Us</th><th>Best in group</th></tr></thead>
+    <tbody>
+      <tr><td>THC 1</td><td class="result loss">0–1</td><td>0–0 (Ballosophen, FC Juno)</td></tr>
+      <tr><td>Ballosophen</td><td class="result draw">0–0</td><td class="result draw">0–0 (THC 1)</td></tr>
+      <tr><td>Fevernova</td><td class="result loss">0–1</td><td>0–0 (FC Juno)</td></tr>
+      <tr><td>FC Juno</td><td class="result draw">0–0</td><td class="result draw">0–0 (THC 1, Fevernova)</td></tr>
+      <tr><td>Roter Stern</td><td class="result win">2–1</td><td>4–0 (Ballosophen)</td></tr>
+      <tr><td>Medizin</td><td class="result loss">1–2</td><td>3–2 (Ballosophen)</td></tr>
+    </tbody>
+  </table>
+
+  <div class="takeaway">
+    <p><strong>Strengths:</strong> Defensive organization in a brutal group · Points off the 4th- and 8th-place finishers · Beat the team ranked directly above us · Never blown out · Penalty composure under pressure</p>
+    <p><strong>Weakness:</strong> Goal conversion — 3 goals in 6 games left no margin for error · The Medizin loss was our only defeat to a bottom-tier side</p>
+    <p><strong>Bottom line:</strong> We were the 6th-best team in the strongest group at the tournament. Same record in a softer group and we're likely 7th–8th overall, not 11th. One more goal — against Medizin, Fevernova, or THC 1 — and the whole narrative changes.</p>
+  </div>
+</section>
+
 <!-- Tactics -->
 <section>
   <h2 class="section-title">Tactics</h2>
   <p style="color:var(--muted);font-size:clamp(13px,3.2vw,15px);line-height:1.7;margin-bottom:16px;max-width:640px">
-    These are 8-minute games — short, intense, nothing like our 90-minute training sessions. Every second counts. Recovering after conceding a goal is extremely difficult in this format, so <strong style="color:var(--card-text)">one goal can decide everything</strong>. We play smart, we play defensive, and we use the ball with purpose. These tactics aren't overcomplicating things — they're simple rules that keep us disciplined, reduce mistakes, and make us effective when it matters most. That's why we built this system.
+    These are 10-minute games — short, intense, nothing like our 90-minute training sessions. Every second counts. Recovering after conceding a goal is extremely difficult in this format, so <strong style="color:var(--card-text)">one goal can decide everything</strong>. We play smart, we play defensive, and we use the ball with purpose. These tactics aren't overcomplicating things — they're simple rules that keep us disciplined, reduce mistakes, and make us effective when it matters most. That's why we built this system.
   </p>
   <div class="tactics">
     <details class="tactic">
@@ -227,10 +379,10 @@ const P=(pos,nm,x,y,gk)=>({pos,nm,x,y,gk});
 const backs=(l,c,r)=>[P('LB',l,22,63),P('CB',c,50,63),P('RB',r,78,63)];
 const std=(st,cm,l,c,r)=>[P('ST',st,50,14),P('CM',cm,50,38),...backs(l,c,r),P('GK','Kenan',50,87,1)];
 const squads=[
- {t:'Los Primos',f:'3-1-1',d:'Starting VI · 8 min',p:std('William','Gulam','Andrei','Murat','Sadegh')},
- {t:'Hitman',f:'3-1-1',d:'Starting VI · 8 min',p:std('Fatih','Genc','Serghei','Murat','Sadegh')},
- {t:'Dream Team',f:'3-1-1',d:'Starting VI · 8 min',p:std('William','Serkan','Emre','Dincer','Emrah')},
- {t:'Risky Biz',f:'3-1-1',d:'Starting VI · 8 min',p:std('Sadegh','Gulam','Gokten','Murat','Ender')},
+ {t:'Los Primos',f:'3-1-1',d:'Starting VI · 10 min',p:std('William','Gulam','Andrei','Murat','Sadegh')},
+ {t:'Hitman',f:'3-1-1',d:'Starting VI · 10 min',p:std('Fatih','Genc','Serghei','Murat','Sadegh')},
+ {t:'Dream Team',f:'3-1-1',d:'Starting VI · 10 min',p:std('William','Serkan','Emre','Dincer','Emrah')},
+ {t:'Risky Biz',f:'3-1-1',d:'Starting VI · 10 min',p:std('Sadegh','Gulam','Gokten','Murat','Ender')},
  {t:'3-1-1 Best Defence',f:'3-1-1',d:'Best defensive 3-1-1',p:std('William','Gulam','Andrei','Murat','Dincer')},
  {t:'Agile Squad',f:'3-1-1',d:'',p:std('William','Gulam','Andrei','Murat','Sadegh')},
  {t:'Full Defensive 3-2',f:'3-2',d:'Hardcore defence',p:[P('CM','Genc',32,26),P('CM','Gulam',68,26),...backs('Andrei','Murat','Dincer'),P('GK','Kenan',50,87,1)]}
