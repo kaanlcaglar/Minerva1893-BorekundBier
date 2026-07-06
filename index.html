@@ -10,7 +10,7 @@
 <!-- Open Graph / WhatsApp -->
 <meta property="og:type" content="website">
 <meta property="og:title" content="Minerva1893 | Börek und Bier">
-<meta property="og:description" content="Benefiz im Kiez 2026 · Sunday, July 5 · Willi-Boos-Stadion, Berlin · Squads, Tactics & Schedule">
+<meta property="og:description" content="Benefiz im Kiez 2026 · 11th place · Results, goal scorers, squads & tactics">
 <meta property="og:image" content="https://minerva1893-borekund-bier.vercel.app/og-image.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
@@ -19,7 +19,7 @@
 <!-- Twitter Card -->
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Minerva1893 | Börek und Bier">
-<meta name="twitter:description" content="Benefiz im Kiez 2026 · Sunday, July 5 · Willi-Boos-Stadion, Berlin">
+<meta name="twitter:description" content="Benefiz im Kiez 2026 · 11th place · Results & goal scorers">
 <meta name="twitter:image" content="https://minerva1893-borekund-bier.vercel.app/og-image.png">
 <style>
   :root{
@@ -49,6 +49,20 @@
   .schedule tr:not(:last-child) td{border-bottom:1px solid rgba(255,255,255,.06)}
   .schedule .time{font-weight:700;white-space:nowrap;color:var(--accent)}
   .schedule .vs{color:var(--muted);font-size:11px}
+  .schedule .result{font-weight:700;white-space:nowrap;text-align:right}
+  .schedule .win{color:var(--accent)}
+  .schedule .loss{color:#e57373}
+  .schedule .draw{color:var(--muted)}
+  .schedule .scorers{display:block;font-size:11px;color:var(--muted);font-weight:400;margin-top:2px}
+
+  .summary{background:var(--section-bg);border-radius:8px;padding:16px;border-left:3px solid var(--accent);margin-bottom:12px}
+  .summary p{color:var(--muted);font-size:clamp(12px,3vw,14px);line-height:1.65;margin-bottom:8px}
+  .summary p:last-child{margin-bottom:0}
+  .summary strong{color:var(--card-text)}
+  .summary .place{font-size:clamp(18px,4.5vw,24px);font-weight:800;color:var(--accent);margin-bottom:4px}
+
+  .team-photo{display:block;width:100%;max-width:960px;margin:0 auto 12px;border-radius:8px;border:1px solid rgba(255,255,255,.08)}
+  .photo-caption{text-align:center;color:var(--muted);font-size:clamp(11px,2.8vw,13px);margin-bottom:12px}
 
   /* Tactics */
   .tactics{display:grid;grid-template-columns:1fr;gap:10px}
@@ -99,9 +113,8 @@
   <h1>Benefiz im Kiez 2026</h1>
   <div class="team">Minerva1893 | Börek und Bier</div>
   <div class="meta">
-    <strong>Sunday, July 5</strong> &middot; 10:00 – 18:00<br>
-    Willi-Boos-Stadion, Baerwaldstr. 35, Berlin<br>
-    6v6 (5+1) &middot; Group A &middot; 6&times;8 min + final 11 min
+    <strong>Sunday, July 5</strong> &middot; Willi-Boos-Stadion, Berlin<br>
+    6v6 (5+1) &middot; Group A &middot; 14 teams
   </div>
   <a class="link" href="https://www.meinturnierplan.de/c/zx02jq3f/benefiz-im-kiez-2026/" target="_blank" rel="noopener">
     Full Tournament Schedule &rarr;
@@ -125,19 +138,47 @@
   </div>
 </section>
 
-<!-- Schedule -->
+<!-- Results -->
 <section>
-  <h2 class="section-title">Our Games</h2>
+  <h2 class="section-title">Results</h2>
+  <img class="team-photo" src="team-photo.png" alt="Minerva1893 team photo at Willi-Boos-Stadion, Benefiz im Kiez 2026">
+  <p class="photo-caption">Willi-Boos-Stadion &middot; July 5, 2026</p>
+  <div class="summary">
+    <div class="place">11th of 14</div>
+    <p><strong>Group A:</strong> 6th &middot; 1W 2D 3L &middot; 3 goals scored</p>
+    <p><strong>Goal scorers:</strong> Dincer, William (vs Roter Stern) &middot; Fatih (vs Medizin)</p>
+  </div>
   <table class="schedule">
-    <thead><tr><th>Kick-off</th><th>Match</th></tr></thead>
+    <thead><tr><th>Match</th><th>Result</th></tr></thead>
     <tbody>
-      <tr><td class="time">11:20</td><td><span class="vs">vs</span> Medizin Friedrichshain</td></tr>
-      <tr><td class="time">11:40</td><td><span class="vs">vs</span> Roter Stern Berlin</td></tr>
-      <tr><td class="time">12:20</td><td><span class="vs">vs</span> THC 1</td></tr>
-      <tr><td class="time">12:40</td><td><span class="vs">vs</span> FC Juno</td></tr>
-      <tr><td class="time">13:20</td><td><span class="vs">vs</span> Ballosophen</td></tr>
-      <tr><td class="time">14:00</td><td><span class="vs">vs</span> Fevernova</td></tr>
-      <tr><td class="time">TBD</td><td><strong>Final Round</strong> <span class="vs">vs</span> TBD (Group B) &middot; 11 min</td></tr>
+      <tr>
+        <td><span class="vs">vs</span> Medizin Friedrichshain</td>
+        <td class="result loss">1–2<span class="scorers">Fatih</span></td>
+      </tr>
+      <tr>
+        <td><span class="vs">vs</span> Roter Stern Berlin</td>
+        <td class="result win">2–1<span class="scorers">Dincer, William</span></td>
+      </tr>
+      <tr>
+        <td><span class="vs">vs</span> THC 1</td>
+        <td class="result loss">0–1</td>
+      </tr>
+      <tr>
+        <td><span class="vs">vs</span> FC Juno</td>
+        <td class="result draw">0–0</td>
+      </tr>
+      <tr>
+        <td><span class="vs">vs</span> Ballosophen</td>
+        <td class="result draw">0–0</td>
+      </tr>
+      <tr>
+        <td><span class="vs">vs</span> Fevernova</td>
+        <td class="result loss">0–1</td>
+      </tr>
+      <tr>
+        <td><strong>Placement</strong> <span class="vs">vs</span> Pinchos</td>
+        <td class="result win">3–2<span class="scorers">pens: Gulam, Dincer</span></td>
+      </tr>
     </tbody>
   </table>
 </section>
