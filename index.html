@@ -74,9 +74,13 @@
   .motm{display:flex;flex-direction:column;align-items:center;text-align:center;background:var(--section-bg);border-radius:8px;padding:28px 16px;border:1px solid rgba(255,255,255,.06)}
   .motm-badge{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:1.2px;color:var(--gk);margin-bottom:18px}
   .motm-ring{padding:4px;border-radius:50%;background:linear-gradient(135deg,var(--gk),var(--accent));margin-bottom:14px;box-shadow:0 0 24px rgba(245,197,66,.15)}
-  .motm-photo{display:block;width:clamp(140px,38vw,180px);height:clamp(140px,38vw,180px);border-radius:50%;object-fit:cover;object-position:center top;border:3px solid var(--section-bg)}
+  .motm-photo{display:block;width:clamp(140px,38vw,180px);height:clamp(140px,38vw,180px);border-radius:50%;object-fit:cover;object-position:center 15%;border:3px solid var(--section-bg)}
   .motm-name{font-size:clamp(22px,5.5vw,28px);font-weight:800;color:var(--card-text);margin-top:4px}
   .motm-role{font-size:clamp(12px,3vw,14px);color:var(--muted);margin-top:2px}
+  .motm-stats{display:flex;gap:12px;margin-top:18px;width:100%;max-width:280px}
+  .motm-stat{flex:1;background:rgba(255,255,255,.04);border-radius:8px;padding:12px 8px;border:1px solid rgba(255,255,255,.06)}
+  .motm-stat-val{display:block;font-size:clamp(22px,5.5vw,28px);font-weight:800;color:var(--gk);line-height:1}
+  .motm-stat-label{display:block;font-size:10px;color:var(--muted);text-transform:uppercase;letter-spacing:.5px;margin-top:6px}
 
   /* Analysis */
   .analysis-intro{background:var(--section-bg);border-radius:8px;padding:16px;border-left:3px solid var(--accent);margin-bottom:12px}
@@ -214,6 +218,16 @@
     </div>
     <div class="motm-name">Kenan</div>
     <div class="motm-role">Goalkeeper</div>
+    <div class="motm-stats">
+      <div class="motm-stat">
+        <span class="motm-stat-val">18</span>
+        <span class="motm-stat-label">Saves</span>
+      </div>
+      <div class="motm-stat">
+        <span class="motm-stat-val">2</span>
+        <span class="motm-stat-label">Clean sheets</span>
+      </div>
+    </div>
   </div>
 </section>
 
